@@ -1,0 +1,24 @@
+{
+  "name": "app-houdoudou",
+  "version": "1.0.0",
+  "description": "二期项目PC端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoro-dd/app-houdoudou.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoro-dd/app-houdoudou/issues"
+  },
+  "homepage": "https://github.com/zoro-dd/app-houdoudou#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
