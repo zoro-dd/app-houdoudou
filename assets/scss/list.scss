@@ -1,0 +1,259 @@
+$mar: 0 auto;
+$wid: 1080px;
+$fl: left;
+$fr: right;
+$in_bl:inline-block;
+#container {
+    width: 100%;
+    min-height: 3000px;
+    //color: #333;
+    margin: $mar;
+}
+
+.hide {
+    display: none;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+//header start
+header {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 60px;
+    background: url(../images/list-bg.jpeg) center center / 100% no-repeat;
+    //100%????
+    >p {
+        height: 28px;
+        padding-top: 30px;
+        margin-left: 58px;
+    }
+    .pinpx {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        img {
+            display: $in_bl;
+        }
+    }
+    form {
+        width: 60%;
+        height: 49px;
+        margin: $mar;
+        //background: pink;
+        >span {
+            float: $fl;
+            width: 48px;
+            height: 49px;
+            cursor: pointer;
+            &:first-child {
+                margin-right: 6px;
+                background: url(../images/list-icon.png) no-repeat;
+            }
+            &:nth-child(2) {
+                position: relative;
+                i {
+                    display: $in_bl;
+                    width: 48px;
+                    height: 49px;
+                    background: url(../images/list-conditions.png) no-repeat;
+                }
+                >div {
+                    position: absolute;
+                    top: 63px;
+                    left: -140px;
+                    width: 600px;
+                    height: 258px;
+                    padding: 40px 60px;
+                    border-radius: 3px;
+                    background-color: #fff;
+                    //overflow: hidden;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        top: -13px;
+                        left: 158px;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-color: transparent;
+                        border-style: solid;
+                        border-width: 0 9px 13px 9px;
+                        border-bottom-color: white;
+                        // 很实用
+                    }
+                    ul {
+                        li {
+                            float: left;
+                            width: 190px;
+                            color: #878787;
+                            font-weight: bold;
+                            cursor: pointer;
+                            margin: 6px 10px 6px 0;
+                            &:hover {
+                                color: #1e1e1e;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >div {
+            position: relative;
+            float: $fr;
+            width: 758px;
+            height: 33px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            .inp1 {
+                width: 707px;
+                height: 22px;
+                color: #555;
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            .inp2 {
+                position: absolute;
+                top: 7px;
+                right: 12px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                cursor: pointer;
+                background: rgba(0, 0, 0, 0.06);
+                +span {
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    color: #fff;
+                    cursor: pointer;
+                    .iconfont {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .keywords {
+        height: 20px;
+        text-align: center;
+        color: #fff;
+        margin-top: 24px;
+        z-index: 99;
+        a {
+            color: #fff;
+            margin-right: 7px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 360px;
+        //background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
+        //z-index
+    }
+    .fixed-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 1519px;
+        height: 49px;
+        padding: 5px 0;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.17);
+        img {
+            width: 180px;
+            height: 36px;
+        }
+        a {
+            position: absolute;
+            top: 13px;
+            left: 80px;
+        }
+    }
+}
+
+//header end
+//main start
+main {
+    width: 1200px;
+    height: auto;
+    margin: $mar;
+    >ul {
+        li {
+            position: relative;
+            width: 286px;
+            height: 375px;
+            margin-bottom: 20px;
+            border: 1px solid #dae0e6;
+            border-radius: 5px;
+            >div:before {
+                content: " ";
+                position: absolute;
+                top: -5px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #dae0e6;
+                border-radius: 5px;
+                z-index: 2;
+            }
+            >div:after {
+                content: " ";
+                position: absolute;
+                top: -10px;
+                width: 100%;
+                height: 100%;
+                //background: #fdfdfd;
+                border: 1px solid #dae0e6;
+                border-radius: 5px;
+                z-index: 1;
+            }
+            .img-a {
+                display: block;
+                text-align: center;
+                padding: 12px;
+            }
+            img {
+                width: 262px;
+                height: 262px;
+            }
+            h5 {
+                width: 269px;
+                height: 42px !important; //??
+                line-height: 20px !important;
+                font-weight: 700;
+                margin: $mar;
+                letter-spacing: 0.5px;
+                a {
+                    color: #121212;
+                    &:hover {
+                        color: #51aded;
+                    }
+                }
+            }
+            p {
+                width: 269px;
+                color: #aab4bc;
+                font-size: 12px;
+                margin: 12px auto 0;
+                span {
+                    margin-right: 10px;
+                }
+                .iconfont {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+//main end

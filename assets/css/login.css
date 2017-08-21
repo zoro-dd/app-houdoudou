@@ -113,9 +113,14 @@ main .form form > div span {
   text-align: center;
 }
 
-main .form form .test > div {
+main .form form .test {
   position: relative;
-  display: inline-block;
+}
+
+main .form form .test > div {
+  position: absolute;
+  top: 11px;
+  left: 82px;
   width: 261px;
   height: 28px;
   line-height: 28px;

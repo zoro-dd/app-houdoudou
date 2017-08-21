@@ -104,13 +104,11 @@ main {
                 position: relative;
                 >div {
                     position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: $in_bl;
+                    top: 11px;
+                    left: 82px;
                     width: 261px;
                     height: 28px;
                     line-height: 28px;
-                    //margin-top: 11px;
                     background: url(../images/test.png) no-repeat;
                     span {
                         position: absolute;
