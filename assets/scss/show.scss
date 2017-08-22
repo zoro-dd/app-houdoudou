@@ -379,28 +379,16 @@ main {
     }
 }
 
-.wrap {
-    width: 100%;
-    height: 310px;
-    background-color: #f7f7f7;
-    clear: both;
-    >div {
-        width: $wid;
-        height: 310px;
-        margin: $mar;
-        background-color: red;
-    }
-}
 
-.swiper-container {
+/*.swiper-container {
     width: 60%;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.swiper-slide {
+.swiper-container .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 400px;
     height: 200px;
-}
+}*/

@@ -4,10 +4,326 @@
   margin: 0 auto;
 }
 
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.bgcolor {
+  background-color: #fff;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   background: url(../images/reg.jpg) center top no-repeat #246287;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 89px;
+  background-color: #fff;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+header .header {
+  position: relative;
+  width: 1080px;
+  height: 89px;
+  margin: 0 auto;
+}
+
+header .header > a {
+  float: left;
+  margin-top: 20px;
+  margin-right: 25px;
+}
+
+header .header > ul {
+  float: left;
+  line-height: 89px;
+}
+
+header .header > ul > li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header .header > ul > li a {
+  color: #8a929f;
+}
+
+header .header > ul > li .iconfont {
+  font-size: 12px;
+  color: #bec5cf;
+}
+
+header .header > ul .menu1 {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  z-index: 9999;
+  width: 920px;
+  height: 280px;
+  background-color: #fff;
+  border: 1px #cecece solid;
+}
+
+header .header > ul .menu1 span {
+  position: absolute;
+  top: -11px;
+  left: 250px;
+  width: 22px;
+  height: 11px;
+  margin-left: -11px;
+  background: url(../images/jiantou.png);
+}
+
+header .header > ul .menu1 > ul {
+  float: left;
+  width: 200px;
+  height: 260px;
+  padding-top: 20px;
+  background-color: #f4f4f4;
+}
+
+header .header > ul .menu1 > ul li {
+  line-height: 40px;
+  text-align: center;
+}
+
+header .header > ul .menu1 div {
+  position: relative;
+  float: left;
+  width: 690px;
+  height: 228px;
+  padding-left: 15px;
+}
+
+header .header > ul .menu1 div img {
+  display: block;
+  width: 210px;
+  height: 132px;
+  margin-left: 10px;
+}
+
+header .header > ul .menu1 div ul {
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+header .header > ul .menu1 div ul li {
+  float: left;
+  width: 230px;
+  padding-top: 30px;
+}
+
+header .header > ul .menu1 div ul li h4 {
+  width: 210px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+header .header > ul .menu2 {
+  position: absolute;
+  top: 88px;
+  left: 175px;
+  z-index: 9999;
+  width: 300px;
+  height: 185px;
+  background-color: #fff;
+  border: 1px #cecece solid;
+}
+
+header .header > ul .menu2 > span {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 22px;
+  height: 11px;
+  margin-left: -11px;
+  background: url(../images/jiantou.png);
+}
+
+header .header > ul .menu2 li {
+  height: 92px;
+  border-bottom: 1px #e8ecf5 solid;
+  overflow: hidden;
+}
+
+header .header > ul .menu2 li a {
+  display: block;
+  width: 190px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #C5C5C5;
+  padding-left: 110px;
+  margin-top: 25px;
+  background: url("../images/nogreen.gif") no-repeat 40px 5px;
+}
+
+header .header > ul .menu2 li a span {
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+header .header > ul .menu2 li a p {
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+header .header > ul .menu2 li a:hover {
+  color: #46ca71;
+  background: url("../images/green.gif") no-repeat 40px 5px;
+}
+
+header .header > ul .menu3 {
+  position: absolute;
+  top: 88px;
+  left: 295px;
+  width: 200px;
+  height: 163px;
+  border: 1px #cecece solid;
+  background-color: #fff;
+}
+
+header .header > ul .menu3 span {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 22px;
+  height: 11px;
+  margin-left: -11px;
+  background: url(../images/jiantou.png);
+}
+
+header .header > ul .menu3 li {
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px #e8ecf5 solid;
+}
+
+header .header > ul .menu3 li a {
+  color: #707070;
+}
+
+header .header > ul .menu3 li:hover {
+  background-color: #f5f5f5;
+}
+
+header .header > ul .menu3 li:hover a {
+  color: gray;
+}
+
+header .header > ul .menu4 {
+  left: 340px;
+  height: 122px;
+}
+
+header .header .head-search {
+  float: right;
+  width: 170px;
+  height: 30px;
+  margin-top: 28px;
+  border: 1px solid #E6E7EB;
+}
+
+header .header .head-search input {
+  float: left;
+  width: 130px;
+  height: 30px;
+  padding-left: 12px;
+}
+
+header .header .head-search i {
+  float: left;
+  width: 24px;
+  height: 30px;
+  color: #bec5cf;
+  line-height: 30px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+header .header .login {
+  position: relative;
+  float: right;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+header .header .login:hover .menu {
+  display: block;
+}
+
+header .header .login > img {
+  width: 35px;
+  height: 35px;
+  padding: 0 5px;
+  border-radius: 50%;
+}
+
+header .header .login div {
+  position: absolute;
+  top: 45px;
+  left: -140px;
+  width: 176px;
+  height: 143px;
+  padding-bottom: 10px;
+  border: 1px #CECECE solid;
+  background-color: #fff;
+}
+
+header .header .login div img {
+  float: left;
+  width: 40px;
+  margin: 15px 10px 15px 20px;
+}
+
+header .header .login div h3 {
+  float: left;
+  line-height: 70px;
+}
+
+header .header .login div ul {
+  width: 136px;
+  margin: 0 auto;
+  clear: both;
+}
+
+header .header .login div ul li {
+  line-height: 36px;
+  border-top: 1px #ddd solid;
+}
+
+header .header .login div ul li a {
+  color: #707070;
+}
+
+header .header .login div ul li a:hover {
+  color: #4385f5;
+}
+
+header .header .login span {
+  position: absolute;
+  top: 35px;
+  left: 16px;
+  width: 22px;
+  height: 11px;
+  margin-left: -11px;
+  background: url(../images/jiantou.png);
 }
 
 main {
@@ -54,6 +370,7 @@ main .tab {
 
 main .tab .bg-fff {
   background-color: #fff;
+  opacity: 1;
 }
 
 main .tab a {
@@ -65,8 +382,29 @@ main .tab a {
   color: #707070;
   border-radius: 6px;
   padding: 10px 16px;
-  background-color: #a6becd;
+  background-color: #fff;
+  opacity: .6;
   border: 1px solid #ccc;
+}
+
+main .tab a:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+main .tab a:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+main .tab a:nth-child(2) {
+  border-radius: 0;
+}
+
+main .tab a:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  opacity: 1;
 }
 
 main .form {

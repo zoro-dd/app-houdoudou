@@ -25,12 +25,13 @@ $in_bl:inline-block;
 }
 
 @mixin mask($width, $height) {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: $width;
     height: $height;
+    transition: all 0.5s;
     background: url(../images/mask.png);
 }
 
@@ -104,9 +105,6 @@ header {
                     font-size: 12px;
                     color: #bec5cf;
                 }
-                &:hover .menu {
-                    display: block;
-                }
             }
             .menu1 {
                 @include menu(88px, 0, 920px, 280px);
@@ -125,6 +123,7 @@ header {
                     }
                 }
                 div {
+                    position: relative;
                     float: $fl;
                     width: 690px;
                     height: 228px;
@@ -135,6 +134,11 @@ header {
                         width: 210px;
                         height: 132px;
                         margin-left: 10px;
+                    }
+                    ul {
+                        position: absolute;
+                        top: 0;
+                        left: 15px;
                     }
                     ul li {
                         float: $fl;
@@ -356,9 +360,8 @@ header {
         width: 225px;
         height: 480px;
         padding: 0 15px;
-        //opacity: 0.7;??????
         z-index: 12;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, .7);
         h2 {
             width: 240px;
             line-height: 46px;
@@ -445,6 +448,9 @@ main {
             border-radius: 5px;
             border: 1px solid #f2f2f2;
             box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+            &:hover {
+                color: #1e1e1e;
+            }
         }
     }
     .news {
@@ -505,7 +511,7 @@ main {
                 159px);
             }
             &:hover .mask {
-                display: block;
+                opacity: 1;
             }
         }
     }
@@ -519,7 +525,7 @@ main {
             position: relative;
             float: $fl;
             &:hover span {
-                display: block;
+                opacity: 1;
             }
             span {
                 @include mask(529px,
@@ -601,7 +607,7 @@ main {
                     width: 143px;
                     height: 90px;
                 }
-                i {
+                >i {
                     position: absolute;
                     top: 32px;
                     left: 54px;
@@ -651,7 +657,7 @@ main {
                     float: $fl;
                     padding-right: 30px;
                     &:hover span {
-                        display: block;
+                        opacity: 1;
                     }
                     img {
                         width: 250px;
@@ -674,6 +680,9 @@ main {
                         font-size: 20px;
                         a {
                             color: #121212;
+                            &:hover {
+                                color: #4385F5;
+                            }
                         }
                     }
                     h4 {
@@ -762,7 +771,7 @@ main {
             clear: both;
             width: 806px;
             height: 60px;
-            //text-align: center; ???
+            text-align: center;
             padding-top: 80px;
             .onpage {
                 background-color: #c4ccd9;
@@ -774,9 +783,9 @@ main {
                 width: 806px;
                 height: 30px;
                 font-size: 14px;
-                text-align: center; //????
                 li {
-                    float: $fl;
+                    display: inline-block; //*****
+                    //float: $fl; //脱离文档流之后，给父级居中不管用
                     margin: 0 3px;
                     padding: 5px 0;
                     border-radius: 3px;

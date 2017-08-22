@@ -63,10 +63,6 @@ header .header > ul > li .iconfont {
   color: #bec5cf;
 }
 
-header .header > ul > li:hover .menu {
-  display: block;
-}
-
 header .header > ul .menu1 {
   position: absolute;
   top: 88px;
@@ -102,6 +98,7 @@ header .header > ul .menu1 > ul li {
 }
 
 header .header > ul .menu1 div {
+  position: relative;
   float: left;
   width: 690px;
   height: 228px;
@@ -113,6 +110,12 @@ header .header > ul .menu1 div img {
   width: 210px;
   height: 132px;
   margin-left: 10px;
+}
+
+header .header > ul .menu1 div ul {
+  position: absolute;
+  top: 0;
+  left: 15px;
 }
 
 header .header > ul .menu1 div ul li {
@@ -389,7 +392,7 @@ header .header .login span {
   height: 480px;
   padding: 0 15px;
   z-index: 12;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .slide-wrap .day-news h2 {
@@ -490,6 +493,10 @@ main .column a {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
+main .column a:hover {
+  color: #1e1e1e;
+}
+
 main .news li {
   position: relative;
   float: left;
@@ -562,17 +569,18 @@ main .news li h5 {
 }
 
 main .news li .mask {
-  display: none;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 253px;
   height: 159px;
+  transition: all 0.5s;
   background: url(../images/mask.png);
 }
 
 main .news li:hover .mask {
-  display: block;
+  opacity: 1;
 }
 
 main .imgShow {
@@ -589,16 +597,17 @@ main .imgShow li:first-child {
 }
 
 main .imgShow li:first-child:hover span {
-  display: block;
+  opacity: 1;
 }
 
 main .imgShow li:first-child span {
-  display: none;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 529px;
   height: 529px;
+  transition: all 0.5s;
   background: url(../images/mask.png);
 }
 
@@ -693,7 +702,7 @@ main .video ul li img {
   height: 90px;
 }
 
-main .video ul li i {
+main .video ul li > i {
   position: absolute;
   top: 32px;
   left: 54px;
@@ -752,7 +761,7 @@ main .feed .feed-left li p {
 }
 
 main .feed .feed-left li p:hover span {
-  display: block;
+  opacity: 1;
 }
 
 main .feed .feed-left li p img {
@@ -761,12 +770,13 @@ main .feed .feed-left li p img {
 }
 
 main .feed .feed-left li p span {
-  display: none;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 250px;
   height: 157px;
+  transition: all 0.5s;
   background: url(../images/mask.png);
 }
 
@@ -797,6 +807,10 @@ main .feed .feed-left li div h3 {
 
 main .feed .feed-left li div h3 a {
   color: #121212;
+}
+
+main .feed .feed-left li div h3 a:hover {
+  color: #4385F5;
 }
 
 main .feed .feed-left li div h4 {
@@ -894,6 +908,7 @@ main .feed .page {
   clear: both;
   width: 806px;
   height: 60px;
+  text-align: center;
   padding-top: 80px;
 }
 
@@ -909,11 +924,10 @@ main .feed .page ul {
   width: 806px;
   height: 30px;
   font-size: 14px;
-  text-align: center;
 }
 
 main .feed .page ul li {
-  float: left;
+  display: inline-block;
   margin: 0 3px;
   padding: 5px 0;
   border-radius: 3px;

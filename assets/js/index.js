@@ -1,19 +1,13 @@
 window.onload = function() {
     // menu1
-    var dirli = document.querySelectorAll('.menu1>ul li'),
-        showul = document.querySelectorAll('.menu1>div ul'),
-        len = dirli.length,
-        index = 0;
-    for (var i = 0; i < len; i++) {
-        dirli[i].index = i;
-        dirli[i].onmouseover = function() {
-            showul[index].className = 'none';
-            dirli[index].className = '';
-            index = this.index;
-            showul[index].className = 'block';
-            dirli[index].className = 'bgcolor';
-        }
-    }
+    $('.menu1>ul li').mouseover(function() {
+        var index = $(this).index();
+        $(this).addClass('bgcolor').siblings().removeClass('bgcolor');
+        $('.menu1>div ul').eq(index).stop(true, true).fadeIn(800).siblings().hide();
+    })
+    $('.header>ul>li').hover(function() {
+        $(this).find('.menu').stop(true, true).fadeToggle();
+    })
 
     //slide
     var index1 = 0,
@@ -62,8 +56,7 @@ window.onload = function() {
     }
     // slidedown
     $('.slidedown').hover(function() {
-        //$('.slidedown').find('h3').stop(true, true);
-        $(this).find('h3').slideToggle(500);
+        $(this).find('h3').stop(true, true).slideToggle(500);
     });
     // return top
     $('.top').click(function() {
@@ -71,4 +64,22 @@ window.onload = function() {
             scrollTop: 0
         }, 400);
     })
+
+
+    //get getDate
+    var dateArr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+    function getDate() {
+        var d = new Date(),
+            month = d.getMonth() + 1,
+            date = d.getDate(),
+            day = d.getDay();
+        $('.day-news .month').html(month);
+        $('.day-news .day').html(date);
+        $('.day-news .week').html(dateArr[day]);
+    }
+    getDate();
+    setInterval(function() {
+        getDate();
+    }, 1000)
 }
