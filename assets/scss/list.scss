@@ -257,3 +257,37 @@ main {
 }
 
 //main end
+.hash {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 38px;
+    height: 76px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-top: none;
+    li {
+        line-height: 37px;
+        text-align: center;
+        border-top: 1px solid #eee;
+        &:last-child {
+            &:hover {
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+        p {
+            position: fixed;
+            bottom: 30px;
+            right: 67px;
+            opacity: 0;
+            transition: opacity 1s;
+            border: 1px solid #eee;
+        }
+        .iconfont {
+            font-size: 24px;
+            color: #bec5cf;
+        }
+    }
+}

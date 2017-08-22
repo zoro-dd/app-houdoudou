@@ -11,7 +11,13 @@ window.onload = function() {
 
     //搜索导航
     $('.menu').click(function() {
-        $('.menu div').fadeToggle(800);
-        $('.menu i').toggleClass('opacity');
+            $('.menu div').fadeToggle(800);
+            $('.menu i').toggleClass('opacity');
+        })
+        // return top
+    $('.top').click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
     })
 }

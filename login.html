@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.png" />
+    <link rel="stylesheet" href="assets/css/validForm.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_388953_lwpfwkh8n8tcsor.css">
 </head>
 
@@ -244,10 +245,10 @@
                 <a href="#">邮箱注册</a>
             </div>
             <div class="form">
-                <form method="post" action="" class="">
+                <form method="post" action="" class="show demoform">
                     <div>
                         <span class="regMethod">账号</span>
-                        <input type="text" name="username" placeholder="请输入用户名">
+                        <input type="text" name="username" placeholder="请输入用户名" datatype="s6-12" errormsg="用户名必须是6-12位字符串">
                     </div>
                     <div>
                         <span>密码</span>
@@ -255,7 +256,7 @@
                     </div>
                     <div>
                         <span class="regMethod">手机</span>
-                        <input type="text" name="username" placeholder="请输入手机号码">
+                        <input type="text" name="username" placeholder="请输入手机号码" datatype="m" errormsg="必须是手机号码" nullmsg="请输入手机号" sucmsg="手机号码正确">
                     </div>
                     <div>
                         <span class="regMethod">验证码</span>
@@ -264,10 +265,10 @@
                     </div>
                     <input type="submit" value="登录">
                 </form>
-                <form method="post" action="" class="show">
+                <form method="post" action="">
                     <div>
-                        <span class="regMethod">手机</span>
-                        <input type="text" name="username" placeholder="请输入手机号码">
+                        <span class="regMethod">账号</span>
+                        <input type="text" name="username" placeholder="请输入用户名" datatype="s5-16" errormsg="用户名必须是2-4个中文汉字">
                     </div>
                     <div>
                         <span>密码</span>
@@ -296,6 +297,15 @@
     </div>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/Validform_v5.3.2_min.js"></script>
+    <script>
+    $(".demoform").Validform({
+        tiptype: 3
+            //datatype: {
+            //"z2-4": /^[\u4E00-\u9FA5\uf900-\ufa2d]{2,4}$/
+            //}
+    });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,203 @@
+$mar: 0 auto;
+$wid: 1080px;
+$fl: left;
+$fr: right;
+$in_bl:inline-block;
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+#container {
+    width: 100%;
+    margin: $mar;
+}
+
+.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: url(../images/user-bg.png) left repeat-y;
+    .logo {
+        display: block;
+        width: 200px;
+        height: 90px;
+        background: url(../images/user-logo.png) no-repeat center center;
+    }
+    >p {
+        width: 70%;
+        margin: $mar;
+        line-height: 18px;
+        color: #787C84;
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+    .set {
+        width: 70%;
+        margin: $mar;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 18px;
+        span {
+            font-size: 14px;
+            padding-left: 5px;
+        }
+    }
+    .set-list {
+        width: 70%;
+        margin: 5px auto 10px;
+        li {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            .color-fff {
+                color: #fff;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+            a {
+                color: #787C84;
+            }
+        }
+    }
+}
+
+.right {
+    width: 1000px;
+    height: 200px;
+    margin-left: 255px;
+    margin-top: 10px;
+    .sec-0 {
+        width: 870px;
+        color: #333;
+        //background: skyblue;
+        >p {
+            line-height: 20px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            padding-left: 10px;
+            border-left: 2px solid #008AFF;
+        }
+        h5 {
+            height: 58px;
+            line-height: 58px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .face {
+            width: 600px;
+            height: 151px;
+            margin-bottom: 20px;
+            >span {
+                float: $fl;
+                margin-right: 100px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 20px;
+                    border-radius: 50%;
+                }
+            }
+            .face-txt {
+                float: $fl;
+                width: 400px;
+                height: 151px;
+                .active {
+                    color: #fff;
+                    background-color: #4385f5;
+                    border-color: #4385f5;
+                }
+                p {
+                    color: #8b929f;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                button {
+                    color: #8b929f;
+                    font-size: 14px;
+                    padding: 10px 16px;
+                    margin-top: 10px;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                }
+            }
+        }
+        .setFace {
+            height: 60px;
+            clear: both;
+            img {
+                float: $fl;
+                width: 60px;
+                height: 60px;
+                padding: 0 15px;
+                border-radius: 50%;
+            }
+        }
+        h6 {
+            line-height: 58px;
+            font-weight: bold;
+        }
+        form {
+            width: 420px;
+            height: 456px;
+            >div {
+                width: 418px;
+                height: 50px;
+                margin-bottom: 5px;
+                border: 1px solid #E1E5EB;
+                border-radius: 5px;
+                p {
+                    float: $fl;
+                    width: 30%;
+                    text-align: center;
+                    padding-top: 14.5px;
+                }
+                .inp1 {
+                    float: $fl;
+                    width: 65%;
+                    line-height: 50px;
+                    color: #333;
+                }
+                label {
+                    line-height: 50px;
+                    font-weight: 700; //********
+                }
+            }
+            .textarea {
+                height: 104px;
+                textarea {
+                    float: $fr;
+                    width: 68%;
+                    height: 98px;
+                    line-height: 26px;
+                    margin-right: 1%;
+                    border: none;
+                }
+            }
+            >p {
+                input {
+                    width: 100%;
+                    height: 46px;
+                    line-height: 46px;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    border-radius: 5px;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                    background-color: #4385F5;
+                }
+            }
+        }
+    }
+}
