@@ -213,67 +213,69 @@
             </div>
         </header>
         <!-- /header -->
-        <div class="slide-wrap">
-            <ul>
-                <li>
-                    <a href="#"><img src="assets/images/slide1.jpg"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/images/slide2.jpg"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/images/slide3.jpg"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/images/slide4.jpg"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/images/slide5.jpg"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/images/slide6.jpg"></a>
-                </li>
-            </ul>
-            <ol>
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-            <a class="left">
-                <i class="iconfont icon-fanhui"></i>
-            </a>
-            <a class="right">
-                <i class="iconfont icon-gengduo"></i>
-            </a>
-            <div class="day-news">
-                <h2>
+        <div class="banner">
+            <div class="slide-wrap">
+                <ul>
+                    <li>
+                        <a href="#"><img src="assets/images/slide1.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/slide2.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/slide3.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/slide4.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/slide5.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/slide6.jpg"></a>
+                    </li>
+                </ul>
+                <ol>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <a class="left">
+                    <i class="iconfont icon-fanhui"></i>
+                </a>
+                <a class="right">
+                    <i class="iconfont icon-gengduo"></i>
+                </a>
+                <div class="day-news">
+                    <h2>
                     每日新鲜<span class="day"></span>
                     <p>
                         <span class="week"></span><br>
                         <span><i class="month"></i>月</span>
                     </p>
                 </h2>
-                <ul>
-                    <li>
-                        <a href="#"><img src="assets/images/feed4.jpg"></a>
-                        <p><a href="#">yuri himuro 手帕花束展亮相东京 打造梦幻空间体验</a></p>
-                    </li>
-                    <li>
-                        <a href="#"><img src="assets/images/feed5.jpg"></a>
-                        <p><a href="#">将于 10 月 1 日开馆的草间弥生美术馆，是你的东京之行又一个必去之处</a></p>
-                    </li>
-                    <li>
-                        <a href="#"><img src="assets/images/day1.jpg"></a>
-                        <p><a href="#">新苏格兰当代艺术展</a></p>
-                    </li>
-                    <li>
-                        <a href="#"><img src="assets/images/day2.jpg"></a>
-                        <p><a href="#">Paul Smith 大展</a></p>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="assets/images/feed4.jpg"></a>
+                            <p><a href="#">yuri himuro 手帕花束展亮相东京 打造梦幻空间体验</a></p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/images/feed5.jpg"></a>
+                            <p><a href="#">将于 10 月 1 日开馆的草间弥生美术馆，是你的东京之行又一个必去之处</a></p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/images/day1.jpg"></a>
+                            <p><a href="#">新苏格兰当代艺术展</a></p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/images/day2.jpg"></a>
+                            <p><a href="#">Paul Smith 大展</a></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- main -->
@@ -624,6 +626,40 @@
     </div>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script>
+    $(".slide-wrap").mouseenter(function() {
+        var thisPX = $(this).offset().left;
+        var thisPY = $(this).offset().top;
+        var boxWidth = $(this).outerWidth();
+        var boxHeight = $(this).outerHeight();
+        $(this).addClass("threeD");
+        $(".threeD").mousemove(function(event) {
+            var mouseX = event.pageX - thisPX;
+            var mouseY = event.pageY - thisPY;
+            var X;
+            var Y;
+            if (mouseX > boxWidth / 2) {
+                X = mouseX - boxWidth / 2;
+            } else {
+                X = mouseX - boxWidth / 2;
+            }
+            if (mouseY > boxHeight / 2) {
+                Y = boxHeight / 2 - mouseY;
+            } else {
+                Y = boxHeight / 2 - mouseY;
+            }
+            $(".threeD").css({
+                "-webkit-transform": "rotateY(" + X / 50 + "deg) " + "rotateX(" + Y / 50 + "deg)"
+            });
+        });
+    });
+    $(".slide-wrap").mouseleave(function() {
+        $(this).removeClass("threeD");
+        $(this).css({
+            "-webkit-transform": "rotateY(0deg) rotateX(0deg)"
+        });
+    });
+    </script>
 </body>
 
 </html>

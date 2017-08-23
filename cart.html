@@ -4,10 +4,98 @@
 <head>
     <meta charset="UTF-8" />
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.png" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_388953_lwpfwkh8n8tcsor.css">
 </head>
 
 <body>
-    <p>this is cart shop</p>
+    <div id="container">
+        <div class="shop">
+            <ul>
+                <li class="product-show scale-parent">
+                    <a href="#"><img src="assets/images/show.jpg" title="黑凤梨 男生零食礼盒" class="scale-img"></a>
+                    <div>
+                        <h4><a href="#">黑凤梨 男生零食礼盒</a></h4>
+                        <span>¥138.00</span>
+                        <p>加入购物车</p>
+                    </div>
+                </li>
+                <li class="product-show scale-parent">
+                    <a href="#"><img src="assets/images/show1.jpg" title="黑凤梨 男生零食礼盒" class="scale-img"></a>
+                    <div>
+                        <h4><a href="#">黑凤梨 男生零食礼盒</a></h4>
+                        <span>¥138.00</span>
+                        <p>加入购物车</p>
+                    </div>
+                </li>
+                <li class="product-show scale-parent">
+                    <a href="#"><img src="assets/images/show2.jpg" title="黑凤梨 男生零食礼盒" class="scale-img"></a>
+                    <div>
+                        <h4><a href="#">黑凤梨 男生零食礼盒</a></h4>
+                        <span>¥138.00</span>
+                        <p>加入购物车</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="cart">
+            <div class="cart-left">
+                <div class="face">
+                    <img src="assets/images/touxiang.png" width="25">
+                </div>
+                <div class="car">
+                    <span>购物车</span>
+                    <p>20</p>
+                </div>
+            </div>
+            <div class="cart-right">
+                <div class="checkAll">
+                    <input type="checkbox">
+                    <label>全选</label>
+                </div>
+                <ul>
+                    <li>
+                        <span class="check">
+                            <input type="checkbox">
+                        </span>
+                        <span><img src="assets/images/show.jpg"></span>
+                        <span class="name">精美插画</span>
+                        <span class="price">￥50.00</span>
+                        <span class="num">
+                            <a></a><input type="text" value="2"><a></a>
+                        </span>
+                        <span class="total">
+                            ￥100.00
+                        </span>
+                        <span class="handle">
+                            <a href="#">删除</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="check">
+                            <input type="checkbox">
+                        </span>
+                        <span><img src="assets/images/show1.jpg"></span>
+                        <span class="name">精美插画</span>
+                        <span class="price">￥50.00</span>
+                        <span class="num">
+                            <a></a><input type="text" value="2"><a></a>
+                        </span>
+                        <span class="total">
+                            ￥100.00
+                        </span>
+                        <span class="handle">
+                            <a href="#">删除</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 </body>
 
 </html>

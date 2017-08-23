@@ -1,0 +1,214 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body img {
+  display: inline;
+}
+
+#container {
+  width: 100%;
+  height: 3000px;
+  margin: 0 auto;
+  background: skyblue;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -680px;
+  width: 715px;
+  height: 100%;
+  background: pink;
+}
+
+.cart .cart-left {
+  float: left;
+  width: 35px;
+  height: 100%;
+  background-color: #000;
+}
+
+.cart .cart-left .face {
+  height: 35px;
+  padding-top: 35px;
+  text-align: center;
+}
+
+.cart .cart-left .face img {
+  display: inline;
+  border-radius: 50%;
+}
+
+.cart .cart-left .car {
+  height: 100px;
+  color: #fff;
+  font-size: 12px;
+  margin: 8px 0px;
+  padding-top: 35px;
+  background: url(../images/car.png) no-repeat;
+}
+
+.cart .cart-left .car:hover {
+  background-color: #FF0036;
+}
+
+.cart .cart-left .car span {
+  display: block;
+  width: 20px;
+  height: 50px;
+  line-height: 16px;
+  text-align: center;
+  margin-left: 5.5px;
+}
+
+.cart .cart-left .car p {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FF0036;
+  margin-left: 5.5px;
+  margin-top: 5px;
+}
+
+.cart .cart-right {
+  float: right;
+  width: 680px;
+  height: 100%;
+}
+
+.cart .cart-right .checkAll {
+  height: 28px;
+  line-height: 28px;
+  padding-left: 8px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.cart .cart-right ul li {
+  height: 100px;
+  line-height: 100px;
+  padding-left: 8px;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #fcfcfc;
+}
+
+.cart .cart-right ul li input {
+  float: left;
+  text-align: center;
+}
+
+.cart .cart-right ul li span {
+  float: left;
+  text-align: center;
+}
+
+.cart .cart-right ul li .check {
+  width: 25px;
+  margin-top: 12px;
+}
+
+.cart .cart-right ul li img {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+.cart .cart-right ul li .name {
+  width: 100px;
+}
+
+.cart .cart-right ul li .price {
+  width: 110px;
+}
+
+.cart .cart-right ul li .num {
+  width: 120px;
+  margin-top: 38.5px;
+}
+
+.cart .cart-right ul li .num input {
+  float: left;
+  width: 50px;
+  height: 20px;
+}
+
+.cart .cart-right ul li .num a {
+  float: left;
+  width: 17px;
+  height: 20px;
+  background: skyblue;
+}
+
+.cart .cart-right ul li .total {
+  width: 100px;
+}
+
+.cart .cart-right ul li .handle {
+  width: 100px;
+}
+
+.shop {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.shop img {
+  width: 245px;
+  height: 245px;
+}
+
+.shop .product-show {
+  float: left;
+  width: 245px;
+  height: 361px;
+  font-size: 13px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+
+.shop .product-show > div {
+  text-align: center;
+}
+
+.shop .product-show > a {
+  display: inline-block;
+}
+
+.shop .product-show h4 {
+  height: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  margin-bottom: 4px;
+  margin-top: 31px;
+}
+
+.shop .product-show h4:hover a {
+  color: #b4a078;
+}
+
+.shop .product-show h4 a {
+  color: #333;
+}
+
+.shop .product-show span {
+  height: 21.6px;
+  color: #d4282d;
+  line-height: 21.6px;
+  display: block;
+}
+
+.shop .scale-parent {
+  overflow: hidden;
+}
+
+.shop .scale-img {
+  transition: all 1s linear 0s;
+}
+
+.shop .scale-parent:hover .scale-img {
+  transform: scale(1.1);
+}

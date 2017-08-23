@@ -111,5 +111,7 @@ window.onload = function() {
         $('.modalContent').fadeOut(300);
         $('.slide').hide();
         clearInterval(timerImg);
+        console.log(111);
+
     })
 }

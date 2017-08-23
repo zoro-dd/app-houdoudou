@@ -1,0 +1,190 @@
+$mar: 0 auto;
+$wid: 1080px;
+$fl: left;
+$fr: right;
+$in_bl:inline-block;
+body {
+    width: 100%;
+    height: 100%;
+    img {
+        display: inline;
+    }
+}
+
+#container {
+    width: 100%;
+    height: 3000px;
+    margin: $mar;
+    background: skyblue;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -680px;
+    width: 715px;
+    height: 100%;
+    background: pink;
+    .cart-left {
+        float: $fl;
+        width: 35px;
+        height: 100%;
+        background-color: #000;
+        .face {
+            height: 35px;
+            padding-top: 35px;
+            text-align: center;
+            img {
+                display: inline;
+                border-radius: 50%;
+            }
+        }
+        .car {
+            height: 100px;
+            color: #fff;
+            font-size: 12px;
+            margin: 8px 0px;
+            padding-top: 35px;
+            background: url(../images/car.png) no-repeat;
+            &:hover {
+                background-color: #FF0036;
+            }
+            span {
+                display: block;
+                width: 20px;
+                height: 50px;
+                line-height: 16px;
+                text-align: center;
+                margin-left: 5.5px;
+            }
+            p {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #FF0036;
+                margin-left: 5.5px;
+                margin-top: 5px;
+            }
+        }
+    }
+    .cart-right {
+        float: $fr;
+        width: 680px;
+        height: 100%;
+        .checkAll {
+            height: 28px;
+            line-height: 28px;
+            padding-left: 8px;
+            background-color: #fcfcfc;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        ul {
+            li {
+                height: 100px;
+                line-height: 100px;
+                padding-left: 8px;
+                border-bottom: 1px solid #e7e7e7;
+                background-color: #fcfcfc;
+                input {
+                    float: $fl;
+                    text-align: center;
+                }
+                span {
+                    float: $fl;
+                    text-align: center;
+                }
+                .check {
+                    width: 25px;
+                    margin-top: 12px;
+                }
+                img {
+                    width: 70px;
+                    height: 70px;
+                    vertical-align: middle;
+                }
+                .name {
+                    width: 100px;
+                }
+                .price {
+                    width: 110px;
+                }
+                .num {
+                    width: 120px;
+                    margin-top: 38.5px;
+                    input {
+                        float: $fl;
+                        width: 50px;
+                        height: 20px;
+                    }
+                    a {
+                        float: $fl;
+                        width: 17px;
+                        height: 20px;
+                        background: skyblue;
+                    }
+                }
+                .total {
+                    width: 100px;
+                }
+                .handle {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+.shop {
+    margin-top: 25px;
+    margin-left: 25px;
+    img {
+        width: 245px;
+        height: 245px;
+    }
+    .product-show {
+        float: left;
+        width: 245px;
+        height: 361px;
+        font-size: 13px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+        >div {
+            text-align: center;
+        }
+        >a {
+            display: inline-block;
+        }
+        h4 {
+            height: 20px;
+            font-weight: 800;
+            line-height: 20px;
+            margin-bottom: 4px;
+            margin-top: 31px;
+            &:hover {
+                a {
+                    color: #b4a078;
+                }
+            }
+            a {
+                color: #333;
+            }
+        }
+        span {
+            height: 21.6px;
+            color: #d4282d;
+            line-height: 21.6px;
+            display: block;
+        }
+    }
+    .scale-parent {
+        overflow: hidden;
+    }
+    .scale-img {
+        transition: all 1s linear 0s;
+    }
+    .scale-parent:hover .scale-img {
+        transform: scale(1.1);
+    }
+}

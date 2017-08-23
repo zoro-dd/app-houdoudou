@@ -303,7 +303,15 @@ header {
 
 // header end
 // slide start
+.banner {
+    perspective: 800px;
+}
+
 .slide-wrap {
+    transform-style: preserve-3d;
+    transition: all .3s;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
     position: relative;
     width: 100%;
     height: 480px;

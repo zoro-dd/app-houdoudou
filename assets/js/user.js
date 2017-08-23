@@ -10,4 +10,16 @@ window.onload = function() {
         laydate.style.top = 679 + 'px';
     })
 
+
+    //select
+    $('.job>a').click(function() {
+        $(this).find('b').toggleClass('bg-pos');
+        $('.select').toggle();
+    })
+    $('.select li').click(function() {
+        $('.job a span').html($(this).html());
+        $('.job').find('b').removeClass('bg-pos');
+        $('.select').css('display', 'none');
+    })
+
 }
