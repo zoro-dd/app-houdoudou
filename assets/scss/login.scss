@@ -369,8 +369,21 @@ main {
         }
     }
     .form {
+        width: 1000px;
         color: #333;
         font-size: 16px;
+        .Validform_checktip {
+            width: 120px;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .Validform_right {
+            text-indent: -9999px;
+        }
+        .Validform_wrong,
+        .Validform_error {
+            background-color: transparent;
+        }
         .show {
             display: block;
         }

@@ -86,7 +86,7 @@
                     </div>
                     <div>
                         <p>出生日期</p>
-                        <input type="text" name="username" class="inp1">
+                        <input type="text" name="username" class="inp1" id="born">
                     </div>
                     <div>
                         <p>职业</p>
@@ -101,6 +101,12 @@
     </div>
     <script src="assets/js/user.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/laydate/laydate.js"></script>
+    <script>
+    laydate.render({
+        elem: '#born' //指定元素
+    });
+    </script>
 </body>
 
 </html>

@@ -404,8 +404,24 @@ main .tab a:hover {
 }
 
 main .form {
+  width: 1000px;
   color: #333;
   font-size: 16px;
+}
+
+main .form .Validform_checktip {
+  width: 120px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+main .form .Validform_right {
+  text-indent: -9999px;
+}
+
+main .form .Validform_wrong,
+main .form .Validform_error {
+  background-color: transparent;
 }
 
 main .form .show {

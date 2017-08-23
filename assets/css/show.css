@@ -918,13 +918,14 @@ footer .footer-2 p {
 .slide {
   position: fixed;
   top: 80px;
-  left: 260px;
+  left: 250px;
   z-index: 99999;
+  user-select: none;
 }
 
 .slide img {
   width: 1000px;
-  height: 653px;
+  height: 650px;
 }
 
 .slide p {

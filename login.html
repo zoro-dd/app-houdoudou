@@ -248,15 +248,15 @@
                 <form method="post" action="" class="show demoform">
                     <div>
                         <span class="regMethod">账号</span>
-                        <input type="text" name="username" placeholder="请输入用户名" datatype="s6-12" errormsg="用户名必须是6-12位字符串">
+                        <input type="text" name="username" placeholder="请输入用户名" datatype="s6-18" errormsg="用户名须由6-18个字符组成" nullmsg="请输入用户名">
                     </div>
                     <div>
                         <span>密码</span>
-                        <input type="password" name="password" placeholder="密码必须是6位以上的字母和数字">
+                        <input type="password" name="password" placeholder="密码须由6-16个字符组成" datatype="s6-16" errormsg="密码须由6-16个字符组成" nullmsg="请输入密码">
                     </div>
                     <div>
                         <span class="regMethod">手机</span>
-                        <input type="text" name="username" placeholder="请输入手机号码" datatype="m" errormsg="必须是手机号码" nullmsg="请输入手机号" sucmsg="手机号码正确">
+                        <input type="text" name="username" placeholder="请输入手机号码" datatype="m" errormsg="请输入正确的手机号" nullmsg="请输入手机号码">
                     </div>
                     <div>
                         <span class="regMethod">验证码</span>
@@ -265,18 +265,18 @@
                     </div>
                     <input type="submit" value="登录">
                 </form>
-                <form method="post" action="">
+                <form method="post" action="" class="demoform">
                     <div>
                         <span class="regMethod">账号</span>
-                        <input type="text" name="username" placeholder="请输入用户名" datatype="s5-16" errormsg="用户名必须是2-4个中文汉字">
+                        <input type="text" name="username" placeholder="请输入用户名" datatype="s6-18" errormsg="用户名须由6-18个字符组成" nullmsg="请输入用户名">
                     </div>
                     <div>
                         <span>密码</span>
-                        <input type="password" name="password" placeholder="请输入密码">
+                        <input type="password" name="password" placeholder="密码须由6-16个字符组成" datatype="s6-16" errormsg="密码须由6-16个字符组成" nullmsg="请输入密码">
                     </div>
                     <div>
                         <span>邮箱</span>
-                        <input type="password" name="password" placeholder="请输入电子邮箱">
+                        <input type="text" name="password" placeholder="请输入电子邮箱" datatype="e" errormsg="请输入正确的电子邮箱" nullmsg="请输入电子邮箱">
                     </div>
                     <div class="test">
                         <span>验证</span>

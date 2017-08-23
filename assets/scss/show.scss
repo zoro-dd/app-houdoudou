@@ -838,11 +838,12 @@ footer {
 .slide {
     position: fixed;
     top: 80px;
-    left: 260px;
+    left: 250px;
     z-index: 99999;
+    user-select: none;
     img {
         width: 1000px;
-        height: 653px;
+        height: 650px;
     }
     p {
         @include position(-25px,
