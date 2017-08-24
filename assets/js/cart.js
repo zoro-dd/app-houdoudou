@@ -15,6 +15,26 @@ window.onload = function() {
         }
     })
 
+    console.log(1111);
+    //toJSON
+    var content = '';
+    $.get('../../3.json', function(msg) {
+        console.log(msg);
+        msg.forEach(function(value, key) {
+            content += `
+             <li class="product-show scale-parent">
+                    <a href="#"><img src="${value.img}" class="scale-img"></a>
+                    <div>
+                        <h4><a href="#">${value.title}</a></h4>
+                        <span>${value.price}</span>
+                        <a href="#" class="addcar">加入购物车</a>
+                    </div>
+                </li>
+            `;
+        })
+        $('.shop ul').html(content);
+    })
+
     //fly
     var offset = $("#end").offset();
     $(".addcar").click(function(event) {
