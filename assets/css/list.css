@@ -1,6 +1,5 @@
 #container {
   width: 100%;
-  min-height: 3000px;
   margin: 0 auto;
 }
 
@@ -192,54 +191,54 @@ header .fixed-bar a {
 }
 
 main {
-  width: 1200px;
+  position: relative;
+  width: 1234px;
   height: auto;
   margin: 0 auto;
 }
 
-main > ul li {
+main .order li {
   position: relative;
   width: 286px;
   height: 375px;
-  margin-bottom: 20px;
+  float: left;
+  margin: 0 10px 30px 10px;
   border: 1px solid #dae0e6;
   border-radius: 5px;
 }
 
-main > ul li > div:before {
+main .order li > div:before {
   content: " ";
   position: absolute;
   top: -5px;
   width: 100%;
-  height: 100%;
+  height: 101%;
   border: 1px solid #dae0e6;
   border-radius: 5px;
-  z-index: 2;
 }
 
-main > ul li > div:after {
+main .order li > div:after {
   content: " ";
   position: absolute;
   top: -10px;
   width: 100%;
-  height: 100%;
+  height: 102%;
   border: 1px solid #dae0e6;
   border-radius: 5px;
-  z-index: 1;
 }
 
-main > ul li .img-a {
+main .order li .img-a {
   display: block;
   text-align: center;
   padding: 12px;
 }
 
-main > ul li img {
+main .order li img {
   width: 262px;
   height: 262px;
 }
 
-main > ul li h5 {
+main .order li h5 {
   width: 269px;
   height: 42px !important;
   line-height: 20px !important;
@@ -248,27 +247,65 @@ main > ul li h5 {
   letter-spacing: 0.5px;
 }
 
-main > ul li h5 a {
+main .order li h5 a {
   color: #121212;
 }
 
-main > ul li h5 a:hover {
+main .order li h5 a:hover {
   color: #51aded;
 }
 
-main > ul li p {
+main .order li p {
   width: 269px;
   color: #aab4bc;
   font-size: 12px;
   margin: 12px auto 0;
 }
 
-main > ul li p span {
+main .order li p span {
   margin-right: 10px;
 }
 
-main > ul li p .iconfont {
+main .order li p .iconfont {
   font-size: 20px;
+}
+
+main .unorder li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+main .unorder li img {
+  width: 260px;
+}
+
+main .unorder li div {
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  width: 240px;
+  height: 25px;
+  color: #8b929f;
+  padding: 10px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+main .unorder li div h5 {
+  width: 95%;
+  line-height: 25px;
+  color: #8b929f;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: url(../images/aixin.png) no-repeat right center;
+}
+
+main .unorder li:hover div {
+  bottom: 0;
 }
 
 .hash {
