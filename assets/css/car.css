@@ -1,0 +1,616 @@
+        .none {
+            display: none;
+        }
+        
+        .block {
+            display: block;
+        }
+        
+        .bgcolor {
+            background-color: #fff;
+        }
+        
+        .slide-wrap .active {
+            background: url(../images/dot2.png);
+        }
+        
+        #container {
+            width: 100%;
+            //min-height: 3000px;
+            margin: 0 auto;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 89px;
+            background-color: #fff;
+            border-bottom: 1px solid #F5F5F5;
+        }
+        
+        header .header {
+            position: relative;
+            width: 1080px;
+            height: 89px;
+            margin: 0 auto;
+        }
+        
+        header .header > a {
+            float: left;
+            margin-top: 20px;
+            margin-right: 25px;
+        }
+        
+        header .header > ul {
+            float: left;
+            line-height: 89px;
+        }
+        
+        header .header > ul > li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        header .header > ul > li a {
+            color: #8a929f;
+        }
+        
+        header .header > ul > li .iconfont {
+            font-size: 12px;
+            color: #bec5cf;
+        }
+        
+        header .header > ul .menu1 {
+            position: absolute;
+            top: 88px;
+            left: 0;
+            z-index: 9999;
+            width: 920px;
+            height: 280px;
+            background-color: #fff;
+            border: 1px #cecece solid;
+        }
+        
+        header .header > ul .menu1 span {
+            position: absolute;
+            top: -11px;
+            left: 250px;
+            width: 22px;
+            height: 11px;
+            margin-left: -11px;
+            background: url(../images/jiantou.png);
+        }
+        
+        header .header > ul .menu1 > ul {
+            float: left;
+            width: 200px;
+            height: 260px;
+            padding-top: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        header .header > ul .menu1 > ul li {
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        header .header > ul .menu1 div {
+            position: relative;
+            float: left;
+            width: 690px;
+            height: 228px;
+            padding-left: 15px;
+        }
+        
+        header .header > ul .menu1 div img {
+            display: block;
+            width: 210px;
+            height: 132px;
+            margin-left: 10px;
+        }
+        
+        header .header > ul .menu1 div ul {
+            position: absolute;
+            top: 0;
+            left: 15px;
+        }
+        
+        header .header > ul .menu1 div ul li {
+            float: left;
+            width: 230px;
+            padding-top: 30px;
+        }
+        
+        header .header > ul .menu1 div ul li h4 {
+            width: 210px;
+            line-height: 16px;
+            font-size: 12px;
+            text-align: left;
+            margin: 0 auto;
+            padding-top: 18px;
+        }
+        
+        header .header > ul .menu2 {
+            position: absolute;
+            top: 88px;
+            left: 175px;
+            z-index: 9999;
+            width: 300px;
+            height: 185px;
+            background-color: #fff;
+            border: 1px #cecece solid;
+        }
+        
+        header .header > ul .menu2 > span {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            width: 22px;
+            height: 11px;
+            margin-left: -11px;
+            background: url(../images/jiantou.png);
+        }
+        
+        header .header > ul .menu2 li {
+            height: 92px;
+            border-bottom: 1px #e8ecf5 solid;
+            overflow: hidden;
+        }
+        
+        header .header > ul .menu2 li a {
+            display: block;
+            width: 190px;
+            height: 48px;
+            font-size: 18px;
+            line-height: 24px;
+            color: #C5C5C5;
+            padding-left: 110px;
+            margin-top: 25px;
+            background: url("../images/nogreen.gif") no-repeat 40px 5px;
+        }
+        
+        header .header > ul .menu2 li a span {
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        
+        header .header > ul .menu2 li a p {
+            font-size: 14px;
+            letter-spacing: 5px;
+        }
+        
+        header .header > ul .menu2 li a:hover {
+            color: #46ca71;
+            background: url("../images/green.gif") no-repeat 40px 5px;
+        }
+        
+        header .header > ul .menu3 {
+            position: absolute;
+            top: 88px;
+            left: 295px;
+            width: 200px;
+            height: 163px;
+            border: 1px #cecece solid;
+            background-color: #fff;
+        }
+        
+        header .header > ul .menu3 span {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            width: 22px;
+            height: 11px;
+            margin-left: -11px;
+            background: url(../images/jiantou.png);
+        }
+        
+        header .header > ul .menu3 li {
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px #e8ecf5 solid;
+        }
+        
+        header .header > ul .menu3 li a {
+            color: #707070;
+        }
+        
+        header .header > ul .menu3 li:hover {
+            background-color: #f5f5f5;
+        }
+        
+        header .header > ul .menu3 li:hover a {
+            color: gray;
+        }
+        
+        header .header > ul .menu4 {
+            left: 340px;
+            height: 122px;
+        }
+        
+        header .header .head-search {
+            float: right;
+            width: 170px;
+            height: 30px;
+            margin-top: 28px;
+            border: 1px solid #E6E7EB;
+        }
+        
+        header .header .head-search input {
+            float: left;
+            width: 130px;
+            height: 30px;
+            padding-left: 12px;
+        }
+        
+        header .header .head-search i {
+            float: left;
+            width: 24px;
+            height: 30px;
+            color: #bec5cf;
+            line-height: 30px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        
+        header .header .login {
+            position: relative;
+            float: right;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        
+        header .header .login:hover .menu {
+            display: block;
+        }
+        
+        header .header .login > img {
+            width: 35px;
+            height: 35px;
+            padding: 0 5px;
+            border-radius: 50%;
+        }
+        
+        header .header .login div {
+            position: absolute;
+            top: 45px;
+            left: -140px;
+            width: 176px;
+            height: 143px;
+            padding-bottom: 10px;
+            border: 1px #CECECE solid;
+            background-color: #fff;
+        }
+        
+        header .header .login div img {
+            float: left;
+            width: 40px;
+            margin: 15px 10px 15px 20px;
+        }
+        
+        header .header .login div h3 {
+            float: left;
+            line-height: 70px;
+        }
+        
+        header .header .login div ul {
+            width: 136px;
+            margin: 0 auto;
+            clear: both;
+        }
+        
+        header .header .login div ul li {
+            line-height: 36px;
+            border-top: 1px #ddd solid;
+        }
+        
+        header .header .login div ul li a {
+            color: #707070;
+        }
+        
+        header .header .login div ul li a:hover {
+            color: #4385f5;
+        }
+        
+        header .header .login span {
+            position: absolute;
+            top: 35px;
+            left: 16px;
+            width: 22px;
+            height: 11px;
+            margin-left: -11px;
+            background: url(../images/jiantou.png);
+        }
+        /* 购物车开始 */
+        /* 购物车开始 */
+        
+        .cart {
+            width: 1090px;
+            min-height: 615px;
+            font-size: 12px;
+            margin: 0 auto;
+            margin-top: 113px;
+            padding-bottom: 40px;
+        }
+        
+        .cart .table-top {
+            width: 1088px;
+            height: 20px;
+            line-height: 20px;
+            color: #333;
+            padding: 12px 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            background-color: #f5f5f5;
+        }
+        
+        .table-top li {
+            float: left;
+        }
+        
+        .table-top li:nth-child(1) {
+            width: 163px;
+            margin-left: 20px;
+        }
+        
+        .cart .inp {
+            float: left;
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+        
+        .table-top li:nth-child(1) span {
+            float: left;
+            margin-left: 14px;
+        }
+        
+        .table-top li:nth-child(2) {
+            width: 200px;
+        }
+        
+        .table-top li:nth-child(3) {
+            width: 122px;
+            text-align: center;
+        }
+        
+        .table-top li:nth-child(4) {
+            width: 220px;
+            text-align: center;
+        }
+        
+        .table-top li:nth-child(5) {
+            width: 133px;
+            text-align: center;
+        }
+        
+        .table-top li:nth-child(6) {
+            width: 200px;
+            text-align: center;
+        }
+        
+        .cart .discount {
+            width: 1028px;
+            height: 43px;
+            padding-left: 60px;
+            margin-bottom: 10px;
+            background-color: #fffbf0;
+            border: 1px solid #ddd;
+        }
+        
+        .discount span {
+            display: inline-block;
+        }
+        
+        .discount .tag {
+            width: 48px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            padding: 0 5px;
+            margin: 11px 0;
+            background-color: #e36843;
+        }
+        
+        .cart .table-body {
+            width: 1088px;
+            height: 483px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .table-body li {
+            width: 1088px;
+            height: 80px;
+            padding: 20px 0;
+            border-bottom: 1px dashed #eaeaea;
+        }
+        
+        .table-body li:last-child {
+            border-bottom: none;
+        }
+        
+        .table-body li img {
+            width: 78px;
+            height: 78px;
+        }
+        
+        .table-body li>div {
+            float: left;
+        }
+        
+        .table-body li .select {
+            width: 40px;
+            height: 20px;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        
+        .table-body li .img {
+            width: 323px;
+            height: 80px;
+        }
+        
+        .table-body li .img>a {
+            float: left;
+            width: 78px;
+            height: 78px;
+            display: inline-block;
+            border: 1px solid #eaeaea;
+        }
+        
+        .table-body li .img>div {
+            float: left;
+            width: 200px;
+            height: 42px;
+            padding: 20px 0 0 42px;
+        }
+        
+        .table-body li .img>div a {
+            color: #333;
+        }
+        
+        .table-body li .img>div a:hover {
+            color: #b4a078;
+        }
+        
+        .table-body li .img>div p {
+            height: 20px;
+            color: #999;
+            font-size: 12px;
+            padding-top: 9px;
+        }
+        
+        .table-body li .price {
+            width: 122px;
+            text-align: center;
+            padding-top: 35px;
+        }
+        
+        .table-body li .btn {
+            width: 107px;
+            height: 24px;
+            margin: 28px 56px 0 56px;
+            border: 0.8px solid #ddd;
+        }
+        
+        .table-body li .btn input {
+            float: left;
+            width: 57px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            padding: 0;
+            border: none;
+            outline: none;
+            border-left: 0.8px solid #ddd;
+            border-right: 0.8px solid #ddd;
+        }
+        
+        .table-body li .btn span {
+            float: left;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .table-body li .btn .iconfont {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .table-body li .total {
+            width: 133px;
+            color: #d4282d;
+            text-align: center;
+            padding-top: 35px;
+        }
+        
+        .table-body li .remove {
+            width: 195px;
+            height: 24px;
+            padding-top: 36px;
+        }
+        
+        .table-body li .remove span {
+            float: right;
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            cursor: pointer;
+            background: url(../images/shanchu.png) no-repeat 0 -50px;
+        }
+        
+        .table-body li .remove span:hover {
+            background-position: 0 -30px;
+        }
+        
+        .cart .table-footer {
+            width: 1088px;
+            height: 65px;
+            border: 1px solid #ddd;
+            background-color: #f5f5f5;
+        }
+        
+        .table-footer>div {
+            float: left;
+            width: 268px;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 23px;
+            margin-left: 20px;
+        }
+        
+        .table-footer>div>span {
+            float: left;
+            margin-left: 14px;
+        }
+        
+        .table-footer>div>a {
+            color: #333;
+            margin-left: 30px;
+        }
+        
+        .table-footer>div>a:hover {
+            color: #b4a078;
+        }
+        
+        .table-footer button {
+            float: right;
+            width: 140px;
+            height: 66px;
+            font-size: 18px;
+            line-height: 50px;
+            color: #fff;
+            margin-top: -1px;
+            margin-right: -1px;
+            border: 1px solid #c0ae8a;
+            background-color: #b4a078;
+        }
+        
+        .table-footer button:hover {
+            background-color: #c0ae8a;
+        }
+        
+        .table-footer p {
+            float: right;
+            width: 427px;
+            height: 54px;
+            color: #b4a078;
+            font-size: 14px;
+            text-align: right;
+            margin-top: 12px;
+            margin-right: 25px;
+        }
+        
+        .table-footer p span {
+            font-size: 22px;
+            color: #d4282d;
+            font-weight: 700;
+        }

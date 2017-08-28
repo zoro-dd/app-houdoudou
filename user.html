@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/user.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.png" />
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_388953_lwpfwkh8n8tcsor.css">
+    <link rel="stylesheet" href="assets/fonts/iconfont.css">
 </head>
 
 <body>
@@ -17,29 +17,29 @@
             <p>Arting365用户中心</p>
             <div class="set">设置</div>
             <ul class="set-list">
-                <li data-index="0"><a href="#" class="color-fff">基本信息</a></li>
-                <li data-index="1"><a href="#">通讯信息</a></li>
-                <li data-index="2"><a href="#">毕业院校</a></li>
-                <li data-index="3"><a href="#">工作信息</a></li>
-                <li data-index="4"><a href="#">更换手机</a></li>
-                <li data-index="5"><a href="#">更换邮箱</a></li>
-                <li data-index="6"><a href="#">修改密码</a></li>
+                <li data-index="0" class="tab"><a href="javascript:;" class="color-fff">基本信息</a></li>
+                <li data-index="1" class="tab"><a href="javascript:;">通讯信息</a></li>
+                <li data-index="2"><a href="javascript:;">毕业院校</a></li>
+                <li data-index="3"><a href="javascript:;">工作信息</a></li>
+                <li data-index="4"><a href="javascript:;">更换手机</a></li>
+                <li data-index="5"><a href="javascript:;">更换邮箱</a></li>
+                <li data-index="6"><a href="javascript:;">修改密码</a></li>
             </ul>
             <div class="set">投稿<span>[商业]</span></div>
             <ul class="set-list">
-                <li data-index="7"><a href="#">发布投稿</a></li>
-                <li data-index="8"><a href="#">订单管理</a></li>
-                <li data-index="9"><a href="#">投稿管理</a></li>
+                <li data-index="7"><a href="javascript:;">发布投稿</a></li>
+                <li data-index="8"><a href="javascript:;">订单管理</a></li>
+                <li data-index="9"><a href="javascript:;">投稿管理</a></li>
             </ul>
             <div class="set">专栏<span>[非商业]</span></div>
             <ul class="set-list">
-                <li data-index="10"><a href="#">开通专栏</a></li>
-                <li data-index="11"><a href="#">专栏管理</a></li>
+                <li data-index="10"><a href="javascript:;">开通专栏</a></li>
+                <li data-index="11"><a href="javascript:;">专栏管理</a></li>
             </ul>
             <div class="set">深度合作<span>[微信]</span></div>
         </div>
         <div class="right">
-            <div class="sec-0">
+            <div class=" sec sec-0">
                 <p>基本信息</p>
                 <h5>头像设置</h5>
                 <div class="face">
@@ -48,6 +48,7 @@
                     </span>
                     <div class="face-txt">
                         <p>支持大小不超过2MB的JPG、JPEG、GIF、PNG或BMP文件。建议使用300x300像素以上的近距离照片，比如大头照、特写等。</p>
+                        <input type="file" style="display:none;">
                         <button type="button" class="active">上 传 头 像</button>
                         <button type="button" class="changeFace">选 择 头 像</button>
                     </div>
@@ -114,6 +115,77 @@
                             <li>在校学生</li>
                         </ul>
                     </div>
+                    <p>
+                        <input type="submit" value="保存">
+                    </p>
+                </form>
+            </div>
+            <div class="sec sec-1" style="display:none;">
+                <p>通讯信息</p>
+                <form>
+                    <div>
+                        <p>QQ号码</p>
+                        <input type="text" name="username" placeholder="QQ号码" class="inp1">
+                    </div>
+                    <div>
+                        <p>联系地址</p>
+                        <input type="text" name="username" placeholder="联系地址" class="inp1">
+                    </div>
+                    <div>
+                        <p>邮政编码</p>
+                        <input type="text" name="username" placeholder="邮政编码" class="inp1">
+                    </div>
+                    <div class="job">
+                        <p>目前居中</p>
+                        <a class="city">
+                            <span>- 请选择 -</span>
+                            <b></b>
+                        </a>
+                        <a class="country">
+                            <span>- 请选择 -</span>
+                            <b></b>
+                        </a>
+                    </div>
+                    <div class="select selectCity" style="display: none;">
+                        <div>
+                            <input type="text">
+                        </div>
+                        <ul>
+                            <li>- 请选择 -</li>
+                            <li data-index="0">北京</li>
+                            <li data-index="1">上海</li>
+                            <li data-index="2">天津</li>
+                            <li data-index="3">重庆</li>
+                            <li data-index="4">黑龙江</li>
+                            <li data-index="5">辽宁</li>
+                            <li data-index="6">吉林</li>
+                            <li data-index="7">河北</li>
+                            <li data-index="8">内蒙古</li>
+                        </ul>
+                    </div>
+                    <div class="select select1" style="display: none;">
+                        <div>
+                            <input type="text">
+                        </div>
+                        <ul>
+                            <li>- 请选择 -</li>
+                        </ul>
+                    </div>
+                    <select class="hideSelect" style="display: none;">
+                        <option class="no">- 请选择 -</option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">天津</option>
+                        <option value="3">重庆</option>
+                        <option value="4">黑龙江</option>
+                        <option value="5">辽宁</option>
+                        <option value="6">吉林</option>
+                        <option value="7">河北</option>
+                        <option value="8">内蒙古</option>
+                    </select>
+                    <select class="hideSelect1" style="display: none;">
+                        <option>- 请选择 -</option>
+                    </select>
                     <p>
                         <input type="submit" value="保存">
                     </p>

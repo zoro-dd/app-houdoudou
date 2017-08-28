@@ -82,4 +82,33 @@ window.onload = function() {
     setInterval(function() {
         getDate();
     }, 1000)
+
+    //loading
+    loadImg();
+    $(window).scroll(function() {
+        loadImg();
+    })
+
+    function loadImg() {
+        // 1.获取滚动的距离
+        var sTop = $(window).scrollTop();
+        // 2.窗口的高度
+        var wHeight = $(window).height();
+        // 3.图片距页面顶部的距离
+        $('img:not(.change)').each(function() {
+            if ($(this).offset().top < sTop + wHeight) {
+                $(this).attr('src', $(this).attr('_src'));
+                //$(this).hide().fadeIn(5000);
+                // 已经改变src地址的图片做个标记
+                $(this).addClass('change');
+            }
+        })
+    }
+    // change video
+
+    $('.video ul li').click(function() {
+        var newSrc = $(this).attr('addSrc');
+        console.log(newSrc);
+        $('video').attr('src', newSrc);
+    })
 }

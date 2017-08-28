@@ -15,54 +15,108 @@ window.onload = function() {
         }
     })
 
-    console.log(1111);
     //toJSON
-    var content = '';
+    /*var content = '';
     $.get('../../3.json', function(msg) {
         console.log(msg);
         msg.forEach(function(value, key) {
             content += `
              <li class="product-show scale-parent">
-                    <a href="#"><img src="${value.img}" class="scale-img"></a>
-                    <div>
-                        <h4><a href="#">${value.title}</a></h4>
+                    <a href="javascript:;"><img src="${value.img}" class="scale-img"></a>
+                    <div class="range">
+                        <h4><a href="javascript:;">${value.title}</a></h4>
                         <span>${value.price}</span>
-                        <a href="#" class="addcar">加入购物车</a>
+                        <a href="javascript:;" class="addcar" onclick="addCart(${key})">加入购物车</a>
                     </div>
                 </li>
             `;
         })
-        $('.shop ul').html(content);
-    })
+
+        $('.shop ul').append(content);
+    })*/
 
     //fly
-    var offset = $("#end").offset();
-    $(".addcar").click(function(event) {
-        var addcar = $(this);
-        var img = addcar.parents().find('img').attr('src');
-        console.log(img);
-        var flyer = $('<img class="u-flyer" src="' + img + '">');
-        console.log(flyer[0]);
-        console.log(flyer);
-        console.log(event.pageX);
-        flyer.fly({
-            start: {
-                left: event.pageX, //开始位置（必填）#fly元素会被设置成position: fixed
-                top: event.pageY //开始位置（必填）
-            },
-            end: {
-                left: offset.left + 10, //结束位置（必填）
-                top: offset.top + 10, //结束位置（必填）
-                width: 0, //结束时宽度
-                height: 0 //结束时高度
-            }
-            /*onEnd: function() { //结束回调
-                $("#msg").show().animate({
-                    width: '250px'
-                }, 200).fadeOut(1000); //提示信息
-                addcar.css("cursor", "default").removeClass('orange').unbind('click');
-                this.destory(); //移除dom
-            }*/
-        });
-    });
+    // $('.addcar').click(function() {
+    //console.log(111);
+    // })
+    //$('.shop').on('click', 'a', function() {
+    //console.log(2222);
+    //})
+
+    var content = '';
+    data.forEach(function(value, key) {
+        content += `
+             <li class="product-show scale-parent">
+                    <a href="javascript:;"><img src="${value.img}" class="scale-img"></a>
+                    <div class="range">
+                        <h4><a href="javascript:;">${value.title}</a></h4>
+                        <span>${value.price}</span>
+                        <a href="javascript:;" class="addcar" onclick="addCart(${key})">加入购物车</a>
+                    </div>
+                    <p style="display:none">${value.id}</p>
+                </li>
+            `;
+    })
+    $('.shop ul').append(content);
+
+}
+var data = [{
+    "id": 2,
+    "img": "assets/images/pbl1/chahua1.jpg",
+    "price": "99",
+    "title": "精美插画 B"
+}, {
+    "id": 3,
+    "img": "assets/images/pbl1/pbl3.jpg",
+    "price": "152",
+    "title": "精美插画 C"
+}, {
+    "id": 4,
+    "img": "assets/images/pbl1/chahua4.jpg",
+    "price": "52",
+    "title": "精美插画 D"
+}, {
+    "id": 5,
+    "img": "assets/images/pbl1/pbl5.png",
+    "price": "74",
+    "title": "精美插画 E"
+}, {
+    "id": 6,
+    "img": "assets/images/pbl1/pbl6.jpg",
+    "price": "86",
+    "title": "精美插画 F"
+}, {
+    "id": 7,
+    "img": "assets/images/pbl1/pbl7.jpg",
+    "price": "72",
+    "title": "精美插画 G"
+}, {
+    "id": 8,
+    "img": "assets/images/pbl1/chahua3.jpg",
+    "price": "55",
+    "title": "精美插画 H"
+}, {
+    "id": 9,
+    "img": "assets/images/pbl1/pbl9.jpg",
+    "price": "89",
+    "title": "精美插画 I"
+}];
+
+function addCart(index) {
+    // 1.获取到要添加的数据
+    var result = data[index];
+    // 2.获取localStorage的数据：目的是对比result是否在res中
+    var res = getData('shop');
+    // 3.判断要添加的商品是否在本地存储中
+    var bool = isExist(result, res);
+    // 4.根据结果添加数据
+    if (bool === false) {
+        // 数据不存在本地存储中，直接推入本地存储中
+        result.num = 1;
+        res.push(result);
+    } else {
+        // 数据存在于本地存储中，数量+1
+        res[bool].num++;
+    }
+    setData('shop', res);
 }

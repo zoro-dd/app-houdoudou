@@ -685,7 +685,6 @@ main .video > div {
   float: left;
   width: 720px;
   height: 450px;
-  background-color: pink;
 }
 
 main .video ul {

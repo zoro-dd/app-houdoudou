@@ -27,8 +27,6 @@ window.onload = function() {
 
 
     //slide
-    //var left = ($(window).width() - $('.slide img').width()) / 2;
-    //$('.slide').css('left', left);
     var srcArr = ['show1.jpg', 'show2.jpg', 'show3.jpg', 'show4.jpg', 'show5.jpg', 'show6.jpg', 'show7.jpg', 'show8.jpg', 'show.jpg'];
     var color = ['rgb(78, 71, 73)', 'rgb(223, 214, 201)', 'rgb(217, 206, 193)', 'rgb(178, 165, 149)', 'rgb(209, 195, 175)', 'rgb(122, 147, 153)', 'rgb(54,80,57)', 'rgb(53,62,64)', 'rgb(79,114,67)'];
 
@@ -56,23 +54,7 @@ window.onload = function() {
             $('.modalCover').css('background-color', color[imgIndex]);
         }, 2000)
     }
-    /* var bool = true;
-     $('.btn-stop').click(function() {
-         if (bool) {
-             clearInterval(timerImg);
-             bool = false;
-             $('.btn-stop').css('background-position', '-75px -25px');
-         } else {
-             run();
-             bool = true;
-             $('.btn-stop').css('background-position', '-100px 0');
-         }
-     })*/
-    $('.btn-close').click(function() {
-        $('.modalCover').fadeOut(300);
-        $('.slide').fadeOut(300);
-        clearInterval(timerImg);
-    });
+
     $('.btn-next').click(function() {
         imgIndex++;
         if (imgIndex > srcArr.length - 1) {
@@ -97,6 +79,12 @@ window.onload = function() {
         $('.btn-stop').css('background-position', '-100px 0');
     })
 
+    /*    $('.btn-close').click(function() {
+            $('.modalCover').fadeOut(300);
+            $('.slide').fadeOut(300);
+            clearInterval(timerImg);
+        });*/
+
     //modal
     $('.modal').click(function() {
         $('.modalCover').fadeIn(300);
@@ -107,11 +95,9 @@ window.onload = function() {
         $('.modalContent').fadeOut(300);
     })
     $('.modalCover').click(function() {
-        $('.modalCover').fadeOut(300);
+        $('.modalCover').css('background-color', 'rgba(0, 0, 0, 0.7)').fadeOut(300);
         $('.modalContent').fadeOut(300);
         $('.slide').hide();
         clearInterval(timerImg);
-        console.log(111);
-
     })
 }
